@@ -57,9 +57,9 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
     
     digitalWrite(SSerialTxControl, RS485Transmit);  // Enable RS485 Transmit    
     RS485Serial.write(byteSend); // Send the byte back
-    delay(10);   
+    delay(1);   
     digitalWrite(SSerialTxControl, RS485Receive);  // Disable RS485 Transmit      
-//    delay(100);
+    delay(200);
   }// End If RS485SerialAvailable
   
 }

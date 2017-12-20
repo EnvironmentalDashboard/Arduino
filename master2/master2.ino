@@ -29,6 +29,15 @@ SoftwareSerial RS485Serial(SSerialRX, SSerialTX); // RX, TX
 int byteReceived;
 int byteSend;
 
+void printBits(byte myByte){
+ for(byte mask = 0x80; mask; mask >>= 1){
+   if(mask  & myByte)
+       Serial.print('1');
+   else
+       Serial.print('0');
+ }
+}
+
 void setup()   /****** SETUP: RUNS ONCE ******/
 {
   // Start the built-in serial port, probably to Serial Monitor
@@ -67,7 +76,9 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
     digitalWrite(Pin13LED, HIGH);  // Show activity
     byteReceived = RS485Serial.read();    // Read received byte
     Serial.write(byteReceived);        // Show on Serial Monitor
-    delay(10);
+//    printBits(byteReceived);
+    delay(20);
+//    printBits("\n");
     digitalWrite(Pin13LED, LOW);  // Show activity   
    }  
 
