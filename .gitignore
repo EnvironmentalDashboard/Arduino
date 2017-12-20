@@ -1,7 +1,7 @@
 # ignore everything
 *
 # whitelist files
-!.gitignore
-!master/*
-!remote/*
-!libraries/*
+!/.gitignore
+!/master/*
+!/remote/*
+!/libraries/*
