@@ -2,6 +2,6 @@
 *
 # whitelist files
 !/.gitignore
-!/master/*
-!/remote/*
-!/libraries/*
+!/master/
+!/remote/
+!/libraries/
